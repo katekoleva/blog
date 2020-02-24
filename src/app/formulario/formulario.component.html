@@ -1,0 +1,23 @@
+<form div class= row class="card col 15" novalidate [formGroup]="form" (ngSubmit)="onSubmit()">
+  <label for="">Título</label>
+  <input type="text" name="titulo" formControlName="titulo" />
+  <label for="">Texto</label>
+  <input type="text" name="texto" formControlName="texto" />
+  <label for="">Autor</label>
+  <input type="text" name="autor" formControlName="autor" />
+  <label for="">Imagen</label>
+  <input type="text" name="imagen" formControlName="imagen" />
+  <label for="">Fecha</label>
+  <input type="text" name="fecha" formControlName="fecha" />
+  <label for="">Categoría</label>
+
+  <select name="" id="" formControlName="categoria">
+    <option value="Noticias">Noticias</option>
+    <option value="Tecnología">Tecnología</option>
+    <option value="Contacto">Contacto</option>
+    <option value="Todos">Todos</option>
+  </select>
+
+  <button (click)="enviarPost()">Enviar</button>
+</form>
+ 

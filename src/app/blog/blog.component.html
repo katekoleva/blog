@@ -1,0 +1,16 @@
+<div class="container row">
+
+    <div class="card col-5.89" style="width: 18rem;" *ngFor="let post of arrPost">
+        <img class="card-img-top" [src]="post.imagen "alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">{{post.titulo}}</h5>
+          <p class="card-text">{{post.texto}}</p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">{{post.autor}}</li>
+          <li class="list-group-item">{{post.categoria}}</li>
+          <li class="list-group-item">{{post.fecha | date:'dd/MM/yyyy'}}</li>
+          <li><button [id]="post.id" (click)="manejarClick($event)">borrar</button></li>
+        </ul>
+    </div>
+</div>
